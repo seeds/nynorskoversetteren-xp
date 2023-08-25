@@ -1,0 +1,2 @@
+# nynorskoversetteren-xp
+Nynorskoversetteren
