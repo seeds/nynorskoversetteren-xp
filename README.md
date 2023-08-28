@@ -22,3 +22,10 @@ A license is required to use this application. Once the app is installed, the Wi
 You can contact [Seeds](https://www.seeds.no/) to request a license. If a valid license is not found in the system, it can be installed by clicking the button `Upload license` in the Widget.
 
 Made by [Seeds Consulting](https://seeds.no)
+
+
+
+
+
+
+

@@ -1,0 +1,172 @@
+.nynorskoversetteren-content {
+    padding: 0px 15px;
+}
+
+.nynorskoversetteren-content .input-group {
+    margin-top: 10px;
+}
+
+.nynorskoversetteren-content .header {
+    width: 100%;
+}
+
+
+#nynorskoversetteren-error {
+    margin-bottom: 10px;
+    color: red;
+    display: none;
+}
+
+.nynorskoversetteren-content .form-base textarea {
+    width: calc(100% - 10px);
+    resize: none;
+    min-height: 200px;
+    outline: none;
+    margin: 5px 0px 10px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+.nynorskoversetteren-content .form-base textarea:hover {
+    border: 1px solid #98c9f2;
+    -webkit-box-shadow: 0 0 5px #98c9f2;
+    box-shadow: 0 0 5px #98c9f2;
+}
+
+.nynorskoversetteren-content .form-base textarea:focus {
+    outline-offset: -2px;
+    outline-style: auto;
+    outline-width: 2px;
+}
+
+.nynorskoversetteren-content .form-base button {
+    width: 100%;
+    background-color: #333333;
+    border: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.nynorskoversetteren-content .form-base button img {
+    height: 50px;
+}
+
+/* Tooltip */
+.nynorskoversetteren-content [data-tooltip] {
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.nynorskoversetteren-content [data-tooltip]:before,
+.nynorskoversetteren-content [data-tooltip]:after {
+    visibility: hidden;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.nynorskoversetteren-content [data-tooltip]:before {
+    position: absolute;
+    bottom: 115%;
+    left: 50%;
+    margin-bottom: 5px;
+    margin-left: -80px;
+    padding: 7px;
+    width: 160px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #000;
+    background-color: hsla(0, 0%, 20%, 0.9);
+    color: #fff;
+    content: attr(data-tooltip);
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.nynorskoversetteren-content [data-tooltip]:after {
+    position: absolute;
+    bottom: 115%;
+    left: 50%;
+    margin-left: -5px;
+    width: 0;
+    border-top: 5px solid #000;
+    border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    content: " ";
+    font-size: 0;
+    line-height: 0;
+}
+
+.nynorskoversetteren-content [data-tooltip]:hover:before,
+.nynorskoversetteren-content [data-tooltip]:hover:after {
+    visibility: visible;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+}
+
+/* Loader */
+.nynorskoversetteren-content .loader {
+    position: absolute;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    border: 5px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    visibility: hidden;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.nynorskoversetteren-license {
+    padding: 10px;
+    text-align: center;
+}
+
+.nynorskoversetteren-license .upload-file {
+    margin: 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nynorskoversetteren-license .upload-file label {
+    display: inline-block;
+    text-align: center;
+    font-size: 12px;
+    background-color: #2c76e9;
+    color: white;
+    cursor: pointer;
+    padding: 8px 19px;
+}
+
+.nynorskoversetteren-license .upload-file input {
+    display: none;
+}
+
+.nynorskoversetteren-license .error-message {
+    color: red;
+    display: none;
+}

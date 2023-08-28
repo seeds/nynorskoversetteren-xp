@@ -1,0 +1,34 @@
+<widget id="nynorskoversetteren" th:attr="data-widget-url=${url}">
+    <link rel="stylesheet" th:href="${portal.assetUrl({'_path=css/nynorskoversetteren.css'})}"></link>
+    <script type="text/javascript" th:src="${portal.assetUrl({'_path=js/nynorskoversetteren.js'})}"></script>
+    <div class="nynorskoversetteren-license" th:if="${noLicense}">
+        <p th:text="${translate.noLicense}"></p>
+        <div class="upload-file" id="nynorskoversetteren_upload_input">
+            <span class="loader"></span>
+            <label th:text="${translate.uploadLicense}"></label>
+            <input th:attr="data-service-url=${licenseServiceUrl}" type="file"></input>
+        </div>
+        <p class="error-message" th:text="${translate.invalidLicense}"></p>
+    </div>
+    <div th:unless="${noLicense}" class="nynorskoversetteren-content">
+        <img class="header" th:src="${portal.assetUrl({'_path=images/header.png'})}" th:alt="${translate.alt_header}" />
+        <div class="form-base">
+            <div class="input-group">
+                <label for="nynorskoversetteren_translate_input"><b>Bokmål</b></label>
+                <textarea id="nynorskoversetteren_translate_input" th:placeholder="${translate.input_placeholder}" name="msg"></textarea>
+                <button id="nynorskoversetteren_translate_btn" th:attr="data-service-url=${serviceUrl},data-api-key=${apiKey},data-tooltip=${translate.alt_translate_btn}" type="button">
+                    <span class="loader"></span>
+                    <img th:src="${portal.assetUrl({'_path=images/icon/translate.png'})}" th:alt="${translate.alt_translate_btn}" />
+                </button>
+            </div>
+            <p id="nynorskoversetteren-error" th:text="${translate.error_message}"></p>
+            <div class="input-group">
+                <label for="nynorskoversetteren_copy_input"><b>Nynorsk</b></label>
+                <textarea id="nynorskoversetteren_copy_input" name="translated" readonly></textarea>
+                <button id="nynorskoversetteren_copy_btn" type="button" th:attr="data-tooltip=${translate.alt_copy_btn},data-success-message=${translate.alt_copy_btn_success},data-copy-message=${translate.alt_copy_btn}">
+                    <img th:src="${portal.assetUrl({'_path=images/icon/copy.png'})}" th:alt="${translate.alt_copy_btn}" />
+                </button>
+            </div>
+        </div>
+    </div>
+</widget>
