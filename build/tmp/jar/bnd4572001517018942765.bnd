@@ -1,0 +1,14 @@
+Private-Package=*;-split-package\:\=merge-first
+Bundle-Name=Nynorskoversetteren
+X-Source-Paths=/enonic-xp/source/src/main/resources,/enonic-xp/source/build/resources/main
+Import-Package=*;resolution\:\=optional
+-dsannotations=*
+X-Capability=
+-includeresource.serviceloader=META-INF/services/com.github.mizosoft.methanol.BodyDecoder$Factory\=/tmp/services7805489562828940194/com.github.mizosoft.methanol.BodyDecoder$Factory
+X-Vendor-Name=null
+Bundle-SymbolicName=no.seeds.nynorskoversetteren
+X-Bundle-Type=application
+X-System-Version=[7.9,8)
+-removeheaders=Require-Capability,Include-Resource
+X-Vendor-Url=null
+-nouses=true

@@ -1,0 +1,7 @@
+<widget>
+  <display-name i18n="widgets.nynorskoversetteren.display-name">Nynorskoversetteren</display-name>
+  <description i18n="widgets.nynorskoversetteren.description">Oversette fra bokmål til nynorsk</description>
+  <interfaces>
+    <interface>contentstudio.contextpanel</interface>
+  </interfaces>
+</widget>

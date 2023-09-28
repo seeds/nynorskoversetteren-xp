@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
-  <g transform="matrix(0.274922, 0, 0, -0.274922, 21.644901, 496.322357)" fill="#000000" stroke="none" style="">
-    <path d="M1350 900 l0 -880 35 0 35 0 0 880 0 880 -35 0 -35 0 0 -880z" fill="#EC681C"/>
-    <path d="M370 1370 l0 -70 165 0 165 0 0 -470 0 -470 80 0 80 0 0 470 0 470 165 0 165 0 0 70 0 70 -410 0 -410 0 0 -70z"/>
-  </g>
+<!-- Generator: Adobe Illustrator 27.9.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 4.66 4.67" style="enable-background:new 0 0 4.66 4.67;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{fill:#EC681C;}
+	.st2{fill:#333333;}
+</style>
+<g id="Bakgrunn" class="st0">
+</g>
+<g id="LOGOER">
+	<g>
+		<rect x="3.49" y="0.65" class="st1" width="0.16" height="3.37"/>
+		<path class="st2" d="M2.6,3.38l-1.16-1.6v1.6H1.13V1.29h0.32l1.14,1.57V1.29H2.9v2.09C2.9,3.38,2.6,3.38,2.6,3.38z"/>
+	</g>
+</g>
 </svg>
