@@ -1,4 +1,5 @@
 var translateBtn;
+var autoTranslateBtn;
 var copyBtn;
 var uploadBtn;
 
@@ -6,12 +7,19 @@ initialize();
 
 function initialize() {
     translateBtn = document.getElementById('nynorskoversetteren_translate_btn');
+    autoTranslateBtn = document.getElementById('nynorskoversetteren_auto_translate_btn');
     copyBtn = document.getElementById('nynorskoversetteren_copy_btn');
     uploadBtn = document.getElementById('nynorskoversetteren_upload_input');
 
     if (translateBtn) {
         translateBtn.addEventListener('click', function () {
             translateText(this)
+        }, false)
+    }
+
+    if (autoTranslateBtn) {
+        autoTranslateBtn.addEventListener('click', function () {
+            autoTranslateText(this)
         }, false)
     }
 
@@ -115,6 +123,46 @@ function translateText(elem) {
         .then(response => {
             if (typeof response.text === 'string') {
                 copyText.value = response.text;
+            } else {
+                errorElem.style.display = 'block';
+            }
+        })
+        .catch(error => {
+            errorElem.style.display = 'block';
+            console.error('Error: ', error);
+        })
+        .finally(() => {
+            btnImage.style.visibility = 'visible';
+            loader.style.visibility = 'hidden';
+            elem.disabled = false;
+        })
+    }
+}
+
+function autoTranslateText(elem) {
+    var errorElem = document.getElementById('nynorskoversetteren-error');
+    var serviceUrl = elem.getAttribute('data-service-url');
+    var apiKey = elem.getAttribute('data-api-key');
+    var loader = elem.querySelector('.loader');
+    var btnImage = elem.querySelector('img');
+
+    errorElem.style.display = 'none';
+
+    if (serviceUrl && apiKey) {
+        btnImage.style.visibility = 'hidden';
+        loader.style.visibility = 'visible';
+        elem.disabled = true;
+
+        fetch(serviceUrl, {
+            method: 'POST',
+            body: JSON.stringify({ auto: true }),
+            headers: {
+                'x-api-key': apiKey
+            }
+        })
+        .then(response => {
+            if (response.status == 200) {
+                console.log(`OK`, response)
             } else {
                 errorElem.style.display = 'block';
             }

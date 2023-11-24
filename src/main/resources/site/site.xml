@@ -4,5 +4,14 @@
             <label i18n="site.input.api_key">API Key</label>
             <occurrences minimum="1" maximum="1" />
         </input>
+        <input type="RadioButton" name="mode">
+            <label i18n="site.input.mode">Mode</label>
+            <occurrences minimum="1" maximum="1" />
+            <config>
+                <option value="manual" i18n="site.mode.manual">Manual</option>
+                <option value="automatic" i18n="site.mode.automatic">Automatic</option>
+            </config>
+            <default>manual</default>
+        </input>
     </form>
 </site>

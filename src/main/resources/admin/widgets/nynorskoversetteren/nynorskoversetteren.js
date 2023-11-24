@@ -34,6 +34,7 @@ exports.get = function(req) {
         applicationKey: app.name
     })) || {}
     const apiKey = siteConfig.api_key
+    const mode = siteConfig.mode || 'manual'
 
     if (!apiKey) {
         return {
@@ -43,12 +44,14 @@ exports.get = function(req) {
     }
 
     model = {
-        serviceUrl: Portal.serviceUrl({ service: 'translate', type: 'absolute' }),
+        serviceUrl: Portal.serviceUrl({ service: 'translate', type: 'absolute', params: { contentId: contentId } }),
         apiKey: apiKey,
+        mode: mode,
         translate: {
             input_placeholder: Util.localize('widgets.nynorskoversetteren.view.input_placeholder'),
             alt_header: Util.localize('widgets.nynorskoversetteren.view.alt_header'),
             alt_translate_btn: Util.localize('widgets.nynorskoversetteren.view.alt_translate_btn'),
+            alt_auto_translate_btn: Util.localize('widgets.nynorskoversetteren.view.alt_auto_translate_btn'),
             alt_copy_btn: Util.localize('widgets.nynorskoversetteren.view.alt_copy_btn'),
             error_message: Util.localize('widgets.nynorskoversetteren.view.error_message'),
             alt_copy_btn_success: Util.localize('widgets.nynorskoversetteren.view.alt_copy_btn_success')

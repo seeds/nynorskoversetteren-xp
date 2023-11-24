@@ -5,7 +5,9 @@ const I18n = require('/lib/xp/i18n')
 module.exports = {
     performRequest,
     parseJSON,
-    localize
+    localize,
+    isUrlValue,
+    isUUIDValue
 }
 
 function performRequest(request, MAX_RETRY = 3){
@@ -38,4 +40,14 @@ function localize(key) {
         key: key,
         locale: locale
     })
+}
+
+function isUrlValue(str) {
+    var urlPattern = /^(https?:\/\/)?([\da-zA-Z.-]+)\.([a-z.]{2,6})([/\w.-]*)*\/?$/
+    return urlPattern.test(str)
+}
+
+function isUUIDValue (str) {
+	const regex = new RegExp(/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i)
+	return regex.test(str)
 }

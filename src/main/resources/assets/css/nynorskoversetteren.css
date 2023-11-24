@@ -76,9 +76,9 @@
     bottom: 115%;
     left: 50%;
     margin-bottom: 5px;
-    margin-left: -80px;
+    margin-left: -110px;
     padding: 7px;
-    width: 160px;
+    width: 220px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
@@ -112,6 +112,15 @@
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
+}
+
+.nynorskoversetteren-content [data-tooltip][data-tooltip-position="bottom"]:before {
+    bottom: -85%;
+}
+
+.nynorskoversetteren-content [data-tooltip][data-tooltip-position="bottom"]:after {
+    bottom: -20%;
+    transform: rotate(180deg);
 }
 
 /* Loader */
